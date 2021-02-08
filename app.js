@@ -28,7 +28,7 @@ app.use(passport.session());
 
 
 
-mongoose.connect("mongodb://localhost:27017/userDB",{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://admin_sachin:admin@2020@cluster0.wo6mq.mongodb.net/userDB",{useNewUrlParser:true,useUnifiedTopology:true});
 mongoose.set("useCreateIndex",true);
 
 
@@ -173,6 +173,6 @@ app.route("/register")
 
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT||3000,function(){
     console.log("Server started at port 3000");
 })
